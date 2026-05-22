@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Programs — EduPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+              800: '#1e40af', 900: '#1e3a8a',
+            },
+            accent: {
+              50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
+              400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+              800: '#86198f', 900: '#701a75',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">Edu<span class="gradient-text">Pro</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Home</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">About Us</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary-600 transition py-2">
+              Courses <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 overflow-hidden">
+              <a href="courses.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="globe" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">All Courses</p><p class="text-xs text-slate-500">Browse our full catalog</p></div>
+              </a>
+              <a href="web-development.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="code-2" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Web Development</p><p class="text-xs text-slate-500">Frontend & backend</p></div>
+              </a>
+              <a href="data-science.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-accent-50 flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-accent-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Data Science</p><p class="text-xs text-slate-500">ML & analytics</p></div>
+              </a>
+              <a href="design.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center"><i data-lucide="pen-tool" class="w-4 h-4 text-emerald-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Design</p><p class="text-xs text-slate-500">UI/UX & graphics</p></div>
+              </a>
+              <a href="placement.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center"><i data-lucide="briefcase" class="w-4 h-4 text-amber-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Placement Training</p><p class="text-xs text-slate-500">Career-ready programs</p></div>
+              </a>
+            </div>
+          </div>
+          <a href="placement.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Placements</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Sign In</a>
+          <a href="#" class="btn-shine px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition">Get Started</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition"><i data-lucide="menu" class="w-6 h-6 text-slate-700"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-bold">Edu<span class="gradient-text">Pro</span></span>
+        <button id="closeMobileMenu" class="p-2 rounded-lg hover:bg-slate-100"><i data-lucide="x" class="w-6 h-6"></i></button>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="courses.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">All Courses</a>
+        <a href="web-development.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Web Development</a>
+        <a href="data-science.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Data Science</a>
+        <a href="design.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Design</a>
+        <a href="about.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">About Us</a>
+        <a href="placement.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Placements</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Contact</a>
+      </div>
+      <div class="mt-auto flex flex-col gap-3">
+        <a href="#" class="text-center py-3 rounded-full border border-slate-200 font-medium">Sign In</a>
+        <a href="#" class="text-center py-3 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+<style>
+  .partner-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .partner-logo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+</style>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary-600 to-accent-600 overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="text-center reveal">
+        <p class="text-primary-100 font-semibold text-sm uppercase tracking-wider mb-3">Career Success</p>
+        <h1 class="font-display text-5xl lg:text-6xl font-bold text-white mb-6">Placement <span class="text-white">Programs</span></h1>
+        <p class="text-primary-100 text-xl max-w-2xl mx-auto">Industry-aligned training programs with guaranteed interview opportunities at top tech companies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="py-12 bg-white border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center reveal"><p class="text-4xl font-bold gradient-text">95%</p><p class="text-sm text-slate-500 mt-1">Placement Rate</p></div>
+        <div class="text-center reveal" style="transition-delay: 0.1s;"><p class="text-4xl font-bold gradient-text">$95k</p><p class="text-sm text-slate-500 mt-1">Avg. Starting Salary</p></div>
+        <div class="text-center reveal" style="transition-delay: 0.2s;"><p class="text-4xl font-bold gradient-text">200+</p><p class="text-sm text-slate-500 mt-1">Hiring Partners</p></div>
+        <div class="text-center reveal" style="transition-delay: 0.3s;"><p class="text-4xl font-bold gradient-text">6 mo</p><p class="text-sm text-slate-500 mt-1">Avg. Time to Job</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placement Tracks -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Career Tracks</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Choose Your Path to Success</h2>
+        <p class="text-slate-600 text-lg">Comprehensive programs designed to take you from beginner to job-ready professional.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal">
+          <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mb-5">
+            <i data-lucide="code-2" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Full-Stack Developer</h3>
+          <p class="text-slate-500 text-sm mb-4">Master frontend and backend with React, Node.js, databases, and DevOps. Includes 3 capstone projects.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 6 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$2,499</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent-50 flex items-center justify-center mb-5">
+            <i data-lucide="brain" class="w-7 h-7 text-accent-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Data Scientist</h3>
+          <p class="text-slate-500 text-sm mb-4">Python, ML, Deep Learning, NLP, and MLOps. Work on real datasets from partner companies.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 8 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$2,999</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center mb-5">
+            <i data-lucide="shield" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Cybersecurity Analyst</h3>
+          <p class="text-slate-500 text-sm mb-4">Network security, ethical hacking, incident response, and compliance. Prepare for CompTIA Security+.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 5 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$2,199</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal" style="transition-delay: 0.3s;">
+          <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-5">
+            <i data-lucide="cloud" class="w-7 h-7 text-amber-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Cloud Architect</h3>
+          <p class="text-slate-500 text-sm mb-4">AWS, Azure, GCP, Kubernetes, Terraform. Build and deploy cloud-native applications at scale.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 7 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$2,799</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal" style="transition-delay: 0.4s;">
+          <div class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center mb-5">
+            <i data-lucide="smartphone" class="w-7 h-7 text-rose-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Mobile Developer</h3>
+          <p class="text-slate-500 text-sm mb-4">iOS (Swift), Android (Kotlin), and Flutter. Build production-ready apps and publish to app stores.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 5 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$2,399</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 hover-lift border border-slate-100 reveal" style="transition-delay: 0.5s;">
+          <div class="w-14 h-14 rounded-2xl bg-violet-50 flex items-center justify-center mb-5">
+            <i data-lucide="bot" class="w-7 h-7 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">AI/ML Engineer</h3>
+          <p class="text-slate-500 text-sm mb-4">Deep Learning, Generative AI, LLMs, Computer Vision. Build and deploy AI-powered products.</p>
+          <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 8 months</span>
+            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1-on-1 mentorship</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-lg font-bold gradient-text">$3,299</span>
+            <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-full">Job Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">How It Works</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Your Path to a New Career</h2>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-500/25">
+            <span class="text-2xl font-bold text-white">1</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Enroll & Learn</h4>
+          <p class="text-slate-500 text-sm">Join a structured program with live classes, projects, and mentorship.</p>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.1s;">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-500/25">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Build Projects</h4>
+          <p class="text-slate-500 text-sm">Create a strong portfolio with real-world projects guided by industry mentors.</p>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.2s;">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent-500/25">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Get Certified</h4>
+          <p class="text-slate-500 text-sm">Earn industry-recognized certificates and prepare for technical interviews.</p>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.3s;">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-600 to-primary-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent-500/25">
+            <span class="text-2xl font-bold text-white">4</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Land Your Job</h4>
+          <p class="text-slate-500 text-sm">Get referred to 200+ hiring partners and receive dedicated placement support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hiring Partners -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Trusted By</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Our Hiring Partners</h2>
+        <p class="text-slate-600 text-lg">200+ companies actively recruit from our talent pool.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal"><span class="text-xl font-bold text-slate-700">Google</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.05s;"><span class="text-xl font-bold text-slate-700">Amazon</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.1s;"><span class="text-xl font-bold text-slate-700">Microsoft</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.15s;"><span class="text-xl font-bold text-slate-700">Meta</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.2s;"><span class="text-xl font-bold text-slate-700">Netflix</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.25s;"><span class="text-xl font-bold text-slate-700">Uber</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.3s;"><span class="text-xl font-bold text-slate-700">Airbnb</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.35s;"><span class="text-xl font-bold text-slate-700">Stripe</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.4s;"><span class="text-xl font-bold text-slate-700">Spotify</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.45s;"><span class="text-xl font-bold text-slate-700">Adobe</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.5s;"><span class="text-xl font-bold text-slate-700">Salesforce</span></div>
+        <div class="partner-logo bg-white rounded-xl p-6 flex items-center justify-center h-20 reveal" style="transition-delay: 0.55s;"><span class="text-xl font-bold text-slate-700">Oracle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Success Stories</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Where Our Graduates Work</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 rounded-2xl p-8 reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-700 mb-6 leading-relaxed">"The placement program was incredible. Within 2 weeks of graduating, I had 3 interview offers. Landed my dream job at Google as a Frontend Engineer."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" class="w-12 h-12 rounded-full object-cover" alt="Student">
+            <div>
+              <p class="font-semibold text-slate-900">Daniel Kim</p>
+              <p class="text-sm text-slate-500">Software Engineer at Google</p>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-200">
+            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">Full-Stack Track</span>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 reveal" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-700 mb-6 leading-relaxed">"I switched careers from accounting to data science. The mentorship and portfolio support were game-changers. Now I'm a Data Analyst at Netflix."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" class="w-12 h-12 rounded-full object-cover" alt="Student">
+            <div>
+              <p class="font-semibold text-slate-900">Priya Sharma</p>
+              <p class="text-sm text-slate-500">Data Analyst at Netflix</p>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-200">
+            <span class="text-xs font-semibold text-accent-600 bg-accent-50 px-3 py-1 rounded-full">Data Science Track</span>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 reveal" style="transition-delay: 0.2s;">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-700 mb-6 leading-relaxed">"The interview prep was phenomenal. I was ready for every system design and coding question. Joined Microsoft as a Cloud Solutions Architect."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" class="w-12 h-12 rounded-full object-cover" alt="Student">
+            <div>
+              <p class="font-semibold text-slate-900">Marcus Johnson</p>
+              <p class="text-sm text-slate-500">Cloud Architect at Microsoft</p>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-200">
+            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Cloud Track</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-600 to-accent-600"></div>
+    <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center reveal">
+      <h2 class="font-display text-4xl lg:text-6xl font-bold text-white mb-6">Ready to Start Your Career?</h2>
+      <p class="text-primary-100 text-xl mb-10 max-w-2xl mx-auto">Join thousands of professionals who have transformed their careers through our placement programs. Your next chapter starts here.</p>
+      <a href="contact.html" class="px-8 py-4 rounded-full bg-white text-primary-700 font-bold shadow-xl hover:shadow-2xl transition inline-flex items-center gap-2">
+        Apply Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+      <p class="text-primary-200 text-sm mt-6">Enrollment open for next batch starting June 2024.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i></div>
+            <span class="text-xl font-bold text-white tracking-tight">Edu<span class="text-primary-400">Pro</span></span>
+          </a>
+          <p class="text-slate-400 mb-6 max-w-sm">Empowering learners worldwide with expert-led courses, hands-on projects, and a supportive community.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Courses</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+            <li><a href="data-science.html" class="hover:text-white transition">Data Science</a></li>
+            <li><a href="design.html" class="hover:text-white transition">Design</a></li>
+            <li><a href="courses.html" class="hover:text-white transition">All Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="placement.html" class="hover:text-white transition">Placements</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-slate-500">2024 EduPro. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-sm text-slate-500">
+          <a href="#" class="hover:text-white transition">Privacy</a>
+          <a href="#" class="hover:text-white transition">Terms</a>
+          <a href="#" class="hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

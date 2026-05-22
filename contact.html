@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — EduPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+              800: '#1e40af', 900: '#1e3a8a',
+            },
+            accent: {
+              50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
+              400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+              800: '#86198f', 900: '#701a75',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">Edu<span class="gradient-text">Pro</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Home</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">About Us</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary-600 transition py-2">
+              Courses <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 overflow-hidden">
+              <a href="courses.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="globe" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">All Courses</p><p class="text-xs text-slate-500">Browse our full catalog</p></div>
+              </a>
+              <a href="web-development.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="code-2" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Web Development</p><p class="text-xs text-slate-500">Frontend & backend</p></div>
+              </a>
+              <a href="data-science.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-accent-50 flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-accent-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Data Science</p><p class="text-xs text-slate-500">ML & analytics</p></div>
+              </a>
+              <a href="design.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center"><i data-lucide="pen-tool" class="w-4 h-4 text-emerald-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Design</p><p class="text-xs text-slate-500">UI/UX & graphics</p></div>
+              </a>
+              <a href="placement.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center"><i data-lucide="briefcase" class="w-4 h-4 text-amber-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Placement Training</p><p class="text-xs text-slate-500">Career-ready programs</p></div>
+              </a>
+            </div>
+          </div>
+          <a href="placement.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Placements</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Sign In</a>
+          <a href="#" class="btn-shine px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition">Get Started</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition"><i data-lucide="menu" class="w-6 h-6 text-slate-700"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-bold">Edu<span class="gradient-text">Pro</span></span>
+        <button id="closeMobileMenu" class="p-2 rounded-lg hover:bg-slate-100"><i data-lucide="x" class="w-6 h-6"></i></button>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="courses.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">All Courses</a>
+        <a href="web-development.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Web Development</a>
+        <a href="data-science.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Data Science</a>
+        <a href="design.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Design</a>
+        <a href="about.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">About Us</a>
+        <a href="placement.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Placements</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Contact</a>
+      </div>
+      <div class="mt-auto flex flex-col gap-3">
+        <a href="#" class="text-center py-3 rounded-full border border-slate-200 font-medium">Sign In</a>
+        <a href="#" class="text-center py-3 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+<style>
+  .contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+</style>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="text-center reveal">
+        <p class="text-primary-400 font-semibold text-sm uppercase tracking-wider mb-3">Get in Touch</p>
+        <h1 class="font-display text-5xl lg:text-6xl font-bold text-white mb-6">Contact <span class="gradient-text">Us</span></h1>
+        <p class="text-slate-300 text-xl max-w-2xl mx-auto">Have questions about courses, partnerships, or anything else? We'd love to hear from you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <section class="py-16 -mt-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="contact-card bg-white rounded-2xl p-8 border border-slate-100 text-center reveal">
+          <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="mail" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
+          <p class="text-slate-500 text-sm mb-3">For general inquiries and support</p>
+          <a href="mailto:hello@edupro.com" class="text-primary-600 font-semibold hover:text-primary-700 transition">hello@edupro.com</a>
+        </div>
+        <div class="contact-card bg-white rounded-2xl p-8 border border-slate-100 text-center reveal" style="transition-delay: 0.1s;">
+          <div class="w-14 h-14 rounded-2xl bg-accent-50 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="phone" class="w-7 h-7 text-accent-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Call Us</h3>
+          <p class="text-slate-500 text-sm mb-3">Mon-Fri, 9am - 6pm EST</p>
+          <a href="tel:+1-800-555-0123" class="text-accent-600 font-semibold hover:text-accent-700 transition">+1 (800) 555-0123</a>
+        </div>
+        <div class="contact-card bg-white rounded-2xl p-8 border border-slate-100 text-center reveal" style="transition-delay: 0.2s;">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="map-pin" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Visit Us</h3>
+          <p class="text-slate-500 text-sm mb-3">Our headquarters</p>
+          <span class="text-emerald-600 font-semibold">San Francisco, CA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div class="reveal">
+          <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Send a Message</p>
+          <h2 class="font-display text-4xl font-bold text-slate-900 mb-6">Let's Start a Conversation</h2>
+          <p class="text-slate-600 text-lg mb-8">Fill out the form and our team will get back to you within 24 hours. Whether you're a prospective student, instructor, or partner, we'd love to connect.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="clock" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Fast Response Time</h4>
+                <p class="text-slate-500 text-sm">We respond to all inquiries within 24 hours during business days.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-accent-50 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="headphones" class="w-5 h-5 text-accent-600"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Dedicated Support</h4>
+                <p class="text-slate-500 text-sm">Our support team is trained to help with any question you might have.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="lock" class="w-5 h-5 text-emerald-600"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Your Data is Safe</h4>
+                <p class="text-slate-500 text-sm">We never share your information with third parties.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 lg:p-10 border border-slate-100 reveal" style="transition-delay: 0.2s;">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                <input type="text" placeholder="John" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition" required>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                <input type="text" placeholder="Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition" required>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+              <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+              <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition bg-white" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="courses">Course Questions</option>
+                <option value="partnership">Partnership</option>
+                <option value="careers">Careers</option>
+                <option value="support">Technical Support</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+              <textarea rows="5" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition resize-none" required></textarea>
+            </div>
+            <button type="submit" class="btn-shine w-full px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition inline-flex items-center justify-center gap-2">
+              Send Message <i data-lucide="send" class="w-5 h-5"></i>
+            </button>
+          </form>
+          <div id="formSuccess" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-center">
+            <p class="font-semibold">Message sent successfully!</p>
+            <p class="text-sm">We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map / Office Section -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Our Locations</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Where to Find Us</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal">
+          <div class="h-48 bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-16 h-16 text-primary-400"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">San Francisco</h3>
+            <p class="text-slate-500 text-sm mb-4">123 Market Street, Suite 400<br>San Francisco, CA 94105</p>
+            <div class="flex items-center gap-2 text-primary-600 text-sm font-medium">
+              <i data-lucide="map-pin" class="w-4 h-4"></i> Headquarters
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.1s;">
+          <div class="h-48 bg-gradient-to-br from-accent-500/20 to-primary-500/20 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-16 h-16 text-accent-400"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">New York</h3>
+            <p class="text-slate-500 text-sm mb-4">456 Broadway, Floor 12<br>New York, NY 10013</p>
+            <div class="flex items-center gap-2 text-accent-600 text-sm font-medium">
+              <i data-lucide="map-pin" class="w-4 h-4"></i> East Coast Office
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.2s;">
+          <div class="h-48 bg-gradient-to-br from-emerald-500/20 to-primary-500/20 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-16 h-16 text-emerald-400"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">London</h3>
+            <p class="text-slate-500 text-sm mb-4">78 Farringdon Road<br>London, EC1M 3EJ, UK</p>
+            <div class="flex items-center gap-2 text-emerald-600 text-sm font-medium">
+              <i data-lucide="map-pin" class="w-4 h-4"></i> Europe Office
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">FAQ</p>
+        <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-slate-50 rounded-xl p-6 reveal">
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2"><i data-lucide="help-circle" class="w-5 h-5 text-primary-600"></i> How do I enroll in a course?</h4>
+          <p class="text-slate-600 text-sm">Simply browse our course catalog, select the course you're interested in, and click "Enroll Now." You'll be guided through the checkout process.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 reveal" style="transition-delay: 0.1s;">
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2"><i data-lucide="help-circle" class="w-5 h-5 text-primary-600"></i> Are the certificates recognized by employers?</h4>
+          <p class="text-slate-600 text-sm">Yes, our certificates are recognized by top companies worldwide. Many of our graduates work at Google, Amazon, Microsoft, and more.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 reveal" style="transition-delay: 0.2s;">
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2"><i data-lucide="help-circle" class="w-5 h-5 text-primary-600"></i> What is your refund policy?</h4>
+          <p class="text-slate-600 text-sm">We offer a 30-day money-back guarantee on all courses. If you're not satisfied, simply request a refund within 30 days of purchase.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 reveal" style="transition-delay: 0.3s;">
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2"><i data-lucide="help-circle" class="w-5 h-5 text-primary-600"></i> Do you offer corporate training?</h4>
+          <p class="text-slate-600 text-sm">Absolutely! We offer customized training programs for teams and enterprises. Contact our partnerships team for more details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.remove('hidden');
+      this.reset();
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i></div>
+            <span class="text-xl font-bold text-white tracking-tight">Edu<span class="text-primary-400">Pro</span></span>
+          </a>
+          <p class="text-slate-400 mb-6 max-w-sm">Empowering learners worldwide with expert-led courses, hands-on projects, and a supportive community.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Courses</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+            <li><a href="data-science.html" class="hover:text-white transition">Data Science</a></li>
+            <li><a href="design.html" class="hover:text-white transition">Design</a></li>
+            <li><a href="courses.html" class="hover:text-white transition">All Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="placement.html" class="hover:text-white transition">Placements</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-slate-500">2024 EduPro. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-sm text-slate-500">
+          <a href="#" class="hover:text-white transition">Privacy</a>
+          <a href="#" class="hover:text-white transition">Terms</a>
+          <a href="#" class="hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

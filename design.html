@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Courses — EduPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+              800: '#1e40af', 900: '#1e3a8a',
+            },
+            accent: {
+              50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
+              400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+              800: '#86198f', 900: '#701a75',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">Edu<span class="gradient-text">Pro</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Home</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">About Us</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary-600 transition py-2">
+              Courses <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 overflow-hidden">
+              <a href="courses.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="globe" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">All Courses</p><p class="text-xs text-slate-500">Browse our full catalog</p></div>
+              </a>
+              <a href="web-development.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="code-2" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Web Development</p><p class="text-xs text-slate-500">Frontend & backend</p></div>
+              </a>
+              <a href="data-science.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-accent-50 flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-accent-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Data Science</p><p class="text-xs text-slate-500">ML & analytics</p></div>
+              </a>
+              <a href="design.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center"><i data-lucide="pen-tool" class="w-4 h-4 text-emerald-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Design</p><p class="text-xs text-slate-500">UI/UX & graphics</p></div>
+              </a>
+              <a href="placement.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center"><i data-lucide="briefcase" class="w-4 h-4 text-amber-600"></i></div>
+                <div><p class="text-sm font-medium text-slate-800">Placement Training</p><p class="text-xs text-slate-500">Career-ready programs</p></div>
+              </a>
+            </div>
+          </div>
+          <a href="placement.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Placements</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Sign In</a>
+          <a href="#" class="btn-shine px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition">Get Started</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition"><i data-lucide="menu" class="w-6 h-6 text-slate-700"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-bold">Edu<span class="gradient-text">Pro</span></span>
+        <button id="closeMobileMenu" class="p-2 rounded-lg hover:bg-slate-100"><i data-lucide="x" class="w-6 h-6"></i></button>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="courses.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">All Courses</a>
+        <a href="web-development.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Web Development</a>
+        <a href="data-science.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Data Science</a>
+        <a href="design.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Design</a>
+        <a href="about.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">About Us</a>
+        <a href="placement.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Placements</a>
+        <a href="contact.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Contact</a>
+      </div>
+      <div class="mt-auto flex flex-col gap-3">
+        <a href="#" class="text-center py-3 rounded-full border border-slate-200 font-medium">Sign In</a>
+        <a href="#" class="text-center py-3 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700 overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="text-center reveal">
+        <p class="text-emerald-100 font-semibold text-sm uppercase tracking-wider mb-3">Creative Arts</p>
+        <h1 class="font-display text-5xl lg:text-6xl font-bold text-white mb-6">UI/UX & <span class="text-white/90">Design</span></h1>
+        <p class="text-emerald-100 text-xl max-w-2xl mx-auto">Learn to create beautiful, user-centered designs. Master Figma, Adobe Suite, motion graphics, and design systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Grid -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-12 reveal">
+        <div>
+          <p class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2">Browse Courses</p>
+          <h2 class="font-display text-3xl font-bold text-slate-900">Design Courses</h2>
+        </div>
+        <span class="text-sm text-slate-500 hidden md:block">6 courses available</span>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=340&fit=crop" alt="UI/UX" class="course-img w-full h-full object-cover"><div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-semibold">Bestseller</div></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.9</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">UI/UX Design Masterclass: From Zero to Hero</h3>
+            <p class="text-slate-500 text-sm mb-4">Learn Figma, user research, wireframing, prototyping, and design systems like a pro.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Emily Davis</p><p class="text-xs text-slate-500">Lead Designer</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 6.7k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 32h</span></div><p class="text-xl font-bold gradient-text">$79.99</p></div>
+          </div>
+        </div>
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.1s;">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=340&fit=crop" alt="Motion Graphics" class="course-img w-full h-full object-cover"><div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-600 text-white text-xs font-semibold">New</div></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.6</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Motion Graphics & Animation with After Effects</h3>
+            <p class="text-slate-500 text-sm mb-4">Create stunning animations, title sequences, and explainer videos for brands.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Nina Patel</p><p class="text-xs text-slate-500">Motion Designer</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 3.2k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 24h</span></div><p class="text-xl font-bold gradient-text">$64.99</p></div>
+          </div>
+        </div>
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.2s;">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=340&fit=crop" alt="Adobe" class="course-img w-full h-full object-cover"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.8</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Adobe Creative Suite: Photoshop, Illustrator & XD</h3>
+            <p class="text-slate-500 text-sm mb-4">Master the essential design tools for print, web, and digital product design.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Priya Sharma</p><p class="text-xs text-slate-500">Graphic Designer</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 4.8k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 36h</span></div><p class="text-xl font-bold gradient-text">$74.99</p></div>
+          </div>
+        </div>
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.3s;">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=340&fit=crop" alt="Design System" class="course-img w-full h-full object-cover"><div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary-600 text-white text-xs font-semibold">Trending</div></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.9</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Building Scalable Design Systems</h3>
+            <p class="text-slate-500 text-sm mb-4">Create component libraries, tokens, and documentation for enterprise products.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Daniel Kim</p><p class="text-xs text-slate-500">Design Systems Lead</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 2.1k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 20h</span></div><p class="text-xl font-bold gradient-text">$89.99</p></div>
+          </div>
+        </div>
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.4s;">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=340&fit=crop" alt="3D Design" class="course-img w-full h-full object-cover"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.7</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">3D Design & Modeling with Blender</h3>
+            <p class="text-slate-500 text-sm mb-4">Create 3D models, animations, and renders for games, products, and architecture.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Mark Stevens</p><p class="text-xs text-slate-500">3D Artist</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 1.8k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 28h</span></div><p class="text-xl font-bold gradient-text">$79.99</p></div>
+          </div>
+        </div>
+        <div class="course-card bg-white rounded-2xl overflow-hidden border border-slate-100 hover-lift reveal" style="transition-delay: 0.5s;">
+          <div class="relative overflow-hidden aspect-video"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=340&fit=crop" alt="Branding" class="course-img w-full h-full object-cover"><div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-amber-500 text-white text-xs font-semibold">New</div></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3"><span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-medium">Design</span><div class="flex items-center gap-1 text-amber-500 text-xs font-medium"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i> 4.8</div></div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Brand Identity & Logo Design Masterclass</h3>
+            <p class="text-slate-500 text-sm mb-4">Design memorable logos, color palettes, and brand guidelines for any business.</p>
+            <div class="flex items-center gap-3 mb-4"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" class="w-8 h-8 rounded-full object-cover" alt="Instructor"><div><p class="text-sm font-medium text-slate-900">Lisa Wong</p><p class="text-xs text-slate-500">Brand Designer</p></div></div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-4 text-sm text-slate-500"><span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 2.4k</span><span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 18h</span></div><p class="text-xl font-bold gradient-text">$64.99</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700"></div>
+    <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center reveal">
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Unleash Your Creativity</h2>
+      <p class="text-emerald-100 text-xl mb-10 max-w-2xl mx-auto">Design is everywhere. Start your creative career with hands-on projects and portfolio building.</p>
+      <a href="contact.html" class="px-8 py-4 rounded-full bg-white text-emerald-700 font-bold shadow-xl hover:shadow-2xl transition inline-flex items-center gap-2">
+        Start Designing <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i></div>
+            <span class="text-xl font-bold text-white tracking-tight">Edu<span class="text-primary-400">Pro</span></span>
+          </a>
+          <p class="text-slate-400 mb-6 max-w-sm">Empowering learners worldwide with expert-led courses, hands-on projects, and a supportive community.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Courses</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+            <li><a href="data-science.html" class="hover:text-white transition">Data Science</a></li>
+            <li><a href="design.html" class="hover:text-white transition">Design</a></li>
+            <li><a href="courses.html" class="hover:text-white transition">All Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="placement.html" class="hover:text-white transition">Placements</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-slate-500">2024 EduPro. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-sm text-slate-500">
+          <a href="#" class="hover:text-white transition">Privacy</a>
+          <a href="#" class="hover:text-white transition">Terms</a>
+          <a href="#" class="hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
