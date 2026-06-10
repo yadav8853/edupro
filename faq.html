@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - EduPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              50: '#fdf4ff',
+              100: '#fae8ff',
+              200: '#f5d0fe',
+              300: '#f0abfc',
+              400: '#e879f9',
+              500: '#d946ef',
+              600: '#c026d3',
+              700: '#a21caf',
+              800: '#86198f',
+              900: '#701a75',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="logo.png" alt="EduPro Logo" class="h-12 w-auto">
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Home</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">About Us</a>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary-600 transition py-2">
+              Courses <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 overflow-hidden">
+              <a href="courses.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center"><i data-lucide="globe" class="w-4 h-4 text-primary-600"></i></div>
+                <div><p class="font-medium text-slate-900">Web Development</p><p class="text-xs text-slate-500">Full-stack mastery</p></div>
+              </a>
+              <a href="data-science.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-accent-50 flex items-center justify-center"><i data-lucide="bar-chart-2" class="w-4 h-4 text-accent-600"></i></div>
+                <div><p class="font-medium text-slate-900">Data Science</p><p class="text-xs text-slate-500">Analytics & ML</p></div>
+              </a>
+              <a href="design.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center"><i data-lucide="palette" class="w-4 h-4 text-emerald-600"></i></div>
+                <div><p class="font-medium text-slate-900">Design</p><p class="text-xs text-slate-500">UI/UX & Graphics</p></div>
+              </a>
+            </div>
+          </div>
+          <a href="placement.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Placements</a>
+          <a href="faq.html" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">FAQ</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Sign In</a>
+          <a href="#" class="text-sm font-medium px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white hover:shadow-lg hover:shadow-primary-500/30 transition-all">Get Started</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition">
+          <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-50 p-6 flex flex-col">
+    <button id="close-menu-btn" class="self-end p-2 rounded-lg hover:bg-slate-100 transition mb-8">
+      <i data-lucide="x" class="w-6 h-6 text-slate-600"></i>
+    </button>
+    <div class="flex flex-col gap-2">
+      <a href="index.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Home</a>
+      <a href="about.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">About Us</a>
+      <a href="courses.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Courses</a>
+      <a href="placement.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Placements</a>
+      <a href="faq.html" class="text-lg font-medium text-primary-600 py-3 border-b border-slate-100 mobile-link">FAQ</a>
+      <a href="contact.html" class="text-lg font-medium text-slate-700 py-3 border-b border-slate-100 mobile-link">Contact</a>
+    </div>
+    <div class="mt-auto flex flex-col gap-3">
+      <a href="#" class="text-center py-3 rounded-full border border-slate-200 font-medium">Sign In</a>
+      <a href="#" class="text-center py-3 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="text-center reveal">
+        <p class="text-primary-400 font-semibold text-sm uppercase tracking-wider mb-3">Get Answers</p>
+        <h1 class="font-display text-5xl lg:text-6xl font-bold text-white mb-6">Frequently Asked <span class="gradient-text">Questions</span></h1>
+        <p class="text-slate-300 text-xl max-w-2xl mx-auto">Find answers to common questions about our courses, pricing, and platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">What courses does EduPro offer?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">EduPro offers a wide range of courses in Web Development, Data Science, Design, and more. Our curriculum is designed by industry experts and includes hands-on projects, real-world case studies, and personalized mentorship to help you succeed.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">How long does it take to complete a course?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">Course duration varies depending on the program. Most courses can be completed in 3-6 months with 10-15 hours of study per week. We offer flexible learning schedules to accommodate working professionals and students.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">Do you offer placement assistance?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">Yes! We have a dedicated placement program that includes resume building, interview preparation, and direct connections with our hiring partners. Our placement rate is 95% with an average starting salary of $95k.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">What payment options are available?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">We offer flexible payment options including one-time payment, monthly installments, and income share agreements (ISA). We also provide scholarships for deserving candidates and corporate discounts for group enrollments.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">Can I access course materials after completion?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">Absolutely! Once you enroll, you get lifetime access to all course materials, including video lectures, project files, and future updates. You can revisit the content anytime to refresh your knowledge.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">Is there a refund policy?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">Yes, we offer a 7-day money-back guarantee. If you're not satisfied with the course within the first week, you can request a full refund, no questions asked.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">Do I need prior experience to enroll?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">Most of our courses are designed for beginners and don't require prior experience. We have foundational courses that start from scratch and progressively build up your skills. Some advanced courses may have prerequisites, which are clearly mentioned in the course description.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left">
+            <span class="font-semibold text-slate-900">How do I get help if I'm stuck?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-slate-600">We provide multiple support channels including dedicated mentor sessions, community forums, and 24/7 chat support. Our instructors and teaching assistants are always available to help you overcome challenges and stay on track.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-16 text-center reveal">
+        <p class="text-slate-600 mb-6">Still have questions? We're here to help!</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold hover:shadow-lg hover:shadow-primary-500/30 transition-all">
+          Contact Us <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2 mb-6">
+            <img src="logo.png" alt="EduPro Logo" class="h-12 w-auto">
+          </a>
+          <p class="text-slate-400 mb-6 max-w-sm">Empowering learners worldwide with expert-led courses, hands-on projects, and a supportive community.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-.1 4-.3 0 0 .1 0 .1 0z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4.5a2 2 0 0 1-2-2Z"/><path d="m17.5 17 2.5-2.5a2.121 2.121 0 0 0 3-3L20.5 9a2.121 2.121 0 0 0-3-3l-2.5 2.5"/><path d="m21 15-5-5"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Courses</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+            <li><a href="data-science.html" class="hover:text-white transition">Data Science</a></li>
+            <li><a href="design.html" class="hover:text-white transition">Design</a></li>
+            <li><a href="courses.html" class="hover:text-white transition">All Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="placement.html" class="hover:text-white transition">Placements</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex justify-center">
+        <p class="text-sm text-slate-500">2026 EduPro. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-content').forEach(item => {
+          if (item !== content) {
+            item.classList.add('hidden');
+            item.previousElementSibling.querySelector('.faq-icon').classList.remove('rotate-180');
+          }
+        });
+        
+        // Toggle current FAQ item
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
